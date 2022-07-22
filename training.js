@@ -25,3 +25,15 @@ const getTrainingDays = event => {
 }
 return days;
 };
+// The scope of ‘name’ is too tight
+Const logEvent = event => {
+  Const name = ‘Nala’;
+  Console.log(`${name}’s event is: ${event}`);
+};
+Const logTiem = days => {
+   Const name = ‘Nala’;
+  Console.log(`${name}’s time to train is: ${days} days`);
+};
+Const event = getRandEvent();
+Const days = getTrainingDays(event);
+
