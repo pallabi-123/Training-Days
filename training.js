@@ -16,9 +16,11 @@ const getRandEvent = () => {
 };
 // The scope of ‘days’ is too 
 /* 2) To avoid the RefferenceError, declare days within the getTrainingDays function, before the if statement.*/
-const getTrainingDays = event => {
-  /* 3) Run the program again: no error, but days is undefined! New days variables are being defined in the scope of each if/ else if statement. 
+/* 3) Run the program again: no error, but days is undefined! New days variables are being defined in the scope of each if/ else if statement. 
 Delete the three let’s within the if/else if statements.*/
+/* 4) Run the program again: fixed! Now the if/else if statements are changing the original days rather than defining a new one.*/
+const getTrainingDays = event => {
+  
   let days;
  if (event === ‘Marathon’) {
   days = 50;
