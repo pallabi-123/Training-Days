@@ -14,14 +14,16 @@ const getRandEvent = () => {
    return ‘Pentathlon’;
 }
 };
-// The scope of ‘days’ is too tight
+// The scope of ‘days’ is too 
+/*2) To avoid the RefferenceError, declare days within the getTrainingDays function, before the if statement.*/
 const getTrainingDays = event => {
+  let days;
  if (event === ‘Marathon’) {
-   let days = 50;
+  days = 50;
 } else if (event === ‘Triathlon’) {
-   let days = 100;
+  days = 100;
 } else if (event === ‘Pentathlon’) {
-   let days = 200;
+  days = 200;
 }
 return days;
 };
